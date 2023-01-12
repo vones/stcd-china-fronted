@@ -29,7 +29,6 @@ const Carousel = (props: props) => {
   // 定时切换，设置当前页
   useEffect(() => {
     //鼠标移入状态时不启用定时器
-      console.log(currentPage, hovered, "22");
     if (!hovered) {
       const timer = setTimeout(() => {
         currentPage === 3 || currentPage < 1
