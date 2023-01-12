@@ -103,9 +103,9 @@ const Carousel = (props: props) => {
 
   //监听左右滑动切换
   useEffect(() => {
-    wrapperRef?.current?.addEventListener("touchstart", handelTouchStart);
-    wrapperRef?.current?.addEventListener("touchmove", handelTouchMove);
-    wrapperRef?.current?.addEventListener("touchend", handelTouchend);
+    wrapperRef?.current?.addEventListener("touchstart", handelTouchStart,{passive: true});
+    wrapperRef?.current?.addEventListener("touchmove", handelTouchMove,{passive: true});
+    wrapperRef?.current?.addEventListener("touchend", handelTouchend,{passive: true});
     return () => {
       wrapperRef?.current?.removeEventListener("touchstart", handelTouchStart);
       wrapperRef?.current?.removeEventListener("touchMove", handelTouchMove);
